@@ -7,7 +7,6 @@ import {
   OpenSidebarButton,
 } from './components/OpenCloseButton';
 
-import Search from '../Search';
 
 interface Props<T> {
   isOpen: boolean;
@@ -78,13 +77,6 @@ const Sidebar = <T,>({
             <IconFolderPlus size={16} />
           </button>
         </div>
-        {items?.length > 0 && (
-          <Search
-            placeholder={t('Search prompts...') || ''}
-            searchTerm={searchTerm}
-            onSearch={handleSearchTerm}
-          />
-        )}
 
         <div className="flex-grow overflow-auto">
           {items?.length > 0 && (
